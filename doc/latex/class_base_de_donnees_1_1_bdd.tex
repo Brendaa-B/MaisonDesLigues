@@ -1,0 +1,408 @@
+\hypertarget{class_base_de_donnees_1_1_bdd}{\section{Base\+De\+Donnees.\+Bdd Class Reference}
+\label{class_base_de_donnees_1_1_bdd}\index{Base\+De\+Donnees.\+Bdd@{Base\+De\+Donnees.\+Bdd}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_base_de_donnees_1_1_bdd_ab7425636f7b6865411160424455ddacf}{Bdd} (String Un\+Login, String Un\+Pwd)
+\begin{DoxyCompactList}\small\item\em constructeur de la connexion \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_aa75a70827f654db3f17b9451975446bb}{Fermer\+Connexion} ()
+\begin{DoxyCompactList}\small\item\em Méthode permettant de fermer la connexion \end{DoxyCompactList}\item 
+Data\+Table \hyperlink{class_base_de_donnees_1_1_bdd_a1f5203fd6378328a9545b47b7dd6bd97}{Obtenir\+Donnes\+Oracle} (String Une\+Table\+Ou\+Vue)
+\begin{DoxyCompactList}\small\item\em permet de récupérer le contenu d'une table ou d'une vue. \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_ac60e11f0e915babf2a78d168bf7a744e}{Inscrire\+Benevole} (String p\+Nom, String p\+Prenom, String p\+Adresse1, String p\+Adresse2, String p\+Cp, String p\+Ville, String p\+Tel, String p\+Mail, Date\+Time p\+Date\+Naissance, Int64?p\+Numero\+Licence, Collection$<$ Int16 $>$ p\+Date\+Benevolat)
+\begin{DoxyCompactList}\small\item\em procédure qui va se charger d'invoquer la procédure stockée qui ira inscrire un participant de type bénévole \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_abfbf2eb771a5e60ef361d5d9fc00304f}{Inscrire\+Intervenant} (String p\+Nom, String p\+Prenom, String p\+Adresse1, String p\+Adresse2, String p\+Cp, String p\+Ville, String p\+Tel, String p\+Mail, Int16 p\+Id\+Atelier, String p\+Id\+Statut)
+\begin{DoxyCompactList}\small\item\em Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel intervenant sans nuité \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_a2ecae01b408afab3f2457286b9bc6cc7}{Inscrire\+Intervenant} (String p\+Nom, String p\+Prenom, String p\+Adresse1, String p\+Adresse2, String p\+Cp, String p\+Ville, String p\+Tel, String p\+Mail, Int16 p\+Id\+Atelier, String p\+Id\+Statut, Collection$<$ string $>$ p\+Les\+Categories, Collection$<$ string $>$ p\+Les\+Hotels, Collection$<$ Int16 $>$ p\+Les\+Nuits)
+\begin{DoxyCompactList}\small\item\em Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel intervenant qui aura des nuités \end{DoxyCompactList}\item 
+Dictionary$<$ Int16, String $>$ \hyperlink{class_base_de_donnees_1_1_bdd_af48b871d33fdfd845de9d4012109d00f}{Obtenir\+Dates\+Nuites} ()
+\begin{DoxyCompactList}\small\item\em fonction permettant de construire un dictionnaire dont l'id est l'id d'une nuité et le contenu une date sous la la forme \+: lundi 7 janvier 2013 /// \end{DoxyCompactList}\item 
+\hypertarget{class_base_de_donnees_1_1_bdd_a8d465aeda4c9f18878abfdd9c73458d7}{Dictionary$<$ Int16, String $>$ {\bfseries Obtenir\+Atelier} ()}\label{class_base_de_donnees_1_1_bdd_a8d465aeda4c9f18878abfdd9c73458d7}
+
+\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_a47e6453dc9e7851ca41b8d68a358214f}{Inscrire\+Licencie} (String p\+Nom, String p\+Prenom, String p\+Adresse1, String p\+Adresse2, String p\+Cp, String p\+Ville, String p\+Tel, String p\+Mail, Int16 p\+Id\+Qualite, Int64 p\+Numero\+Licence, Collection$<$ Int16 $>$ p\+Les\+Ateliers, Int64 p\+Num\+Cheque, Double p\+Montant\+Cheque, Collection$<$ Int16 $>$ p\+Les\+Accompagnants, String p\+Inscription)
+\begin{DoxyCompactList}\small\item\em Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel licencié avec nuité \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_aeea37a4bfb9bf95ef02f350c39d003f4}{Inscrire\+Licencie} (String p\+Nom, String p\+Prenom, String p\+Adresse1, String p\+Adresse2, String p\+Cp, String p\+Ville, String p\+Tel, String p\+Mail, Int16 p\+Id\+Qualite, Int64 p\+Numero\+Licence, Collection$<$ Int16 $>$ p\+Les\+Ateliers, Collection$<$ string $>$ p\+Les\+Categories, Collection$<$ string $>$ p\+Les\+Hotels, Collection$<$ Int16 $>$ p\+Les\+Nuits, Int64 p\+Num\+Cheque, Double p\+Montant\+Cheque, Collection$<$ Int16 $>$ p\+Les\+Accompagnants, String p\+Inscription)
+\begin{DoxyCompactList}\small\item\em Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel intervenant sans nuité \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_a32cef1502d8342b040476519c7b6df1e}{Enregistrer\+Paiement} (Double p\+Montant\+Cheque, Int64 p\+Numero\+Cheque, Int64 p\+Numero\+Licencie, String p\+Type\+Paiement)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d'enregistrer un paiement \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_base_de_donnees_1_1_bdd_ab7425636f7b6865411160424455ddacf}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Bdd@{Bdd}}
+\index{Bdd@{Bdd}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Bdd}]{\setlength{\rightskip}{0pt plus 5cm}Base\+De\+Donnees.\+Bdd.\+Bdd (
+\begin{DoxyParamCaption}
+\item[{String}]{Un\+Login, }
+\item[{String}]{Un\+Pwd}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_ab7425636f7b6865411160424455ddacf}
+
+
+constructeur de la connexion 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un\+Login} & login utilisateur\\
+\hline
+{\em Un\+Pwd} & mot de passe utilisateur\\
+\hline
+\end{DoxyParams}
+on commence par récupérer dans Cn\+String les informations contenues dans le fichier app.\+config pour la connection\+String de nom Str\+Conn\+Mdl 
+
+on va remplacer dans la chaine de connexion les paramètres par le login et le pwd saisis dans les zones de texte. Pour ça on va utiliser la méthode Format de la classe String. /// 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_base_de_donnees_1_1_bdd_a32cef1502d8342b040476519c7b6df1e}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Enregistrer\+Paiement@{Enregistrer\+Paiement}}
+\index{Enregistrer\+Paiement@{Enregistrer\+Paiement}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Enregistrer\+Paiement}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+Enregistrer\+Paiement (
+\begin{DoxyParamCaption}
+\item[{Double}]{p\+Montant\+Cheque, }
+\item[{Int64}]{p\+Numero\+Cheque, }
+\item[{Int64}]{p\+Numero\+Licencie, }
+\item[{String}]{p\+Type\+Paiement}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_a32cef1502d8342b040476519c7b6df1e}
+
+
+Fonction qui permet d'enregistrer un paiement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Montant\+Cheque} & Numero du cheque du licencie\\
+\hline
+{\em p\+Numero\+Cheque} & Numero du cheque du licencie\\
+\hline
+{\em p\+Numero\+Licencie} & Numero de licence du licencie\\
+\hline
+{\em p\+Type\+Paiement} & Type de paiement du licencie\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_base_de_donnees_1_1_bdd_aa75a70827f654db3f17b9451975446bb}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Fermer\+Connexion@{Fermer\+Connexion}}
+\index{Fermer\+Connexion@{Fermer\+Connexion}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Fermer\+Connexion}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+Fermer\+Connexion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_aa75a70827f654db3f17b9451975446bb}
+
+
+Méthode permettant de fermer la connexion 
+
+\hypertarget{class_base_de_donnees_1_1_bdd_ac60e11f0e915babf2a78d168bf7a744e}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Inscrire\+Benevole@{Inscrire\+Benevole}}
+\index{Inscrire\+Benevole@{Inscrire\+Benevole}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Inscrire\+Benevole}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+Inscrire\+Benevole (
+\begin{DoxyParamCaption}
+\item[{String}]{p\+Nom, }
+\item[{String}]{p\+Prenom, }
+\item[{String}]{p\+Adresse1, }
+\item[{String}]{p\+Adresse2, }
+\item[{String}]{p\+Cp, }
+\item[{String}]{p\+Ville, }
+\item[{String}]{p\+Tel, }
+\item[{String}]{p\+Mail, }
+\item[{Date\+Time}]{p\+Date\+Naissance, }
+\item[{Int64?}]{p\+Numero\+Licence, }
+\item[{Collection$<$ Int16 $>$}]{p\+Date\+Benevolat}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_ac60e11f0e915babf2a78d168bf7a744e}
+
+
+procédure qui va se charger d'invoquer la procédure stockée qui ira inscrire un participant de type bénévole 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cmd} & nom de l'objet command concerné par les paramètres\\
+\hline
+{\em p\+Nom} & nom du participant\\
+\hline
+{\em p\+Prenom} & prénom du participant\\
+\hline
+{\em p\+Adresse1} & adresse1 du participant\\
+\hline
+{\em p\+Adresse2} & adresse2 du participant\\
+\hline
+{\em p\+Cp} & cp du participant\\
+\hline
+{\em p\+Ville} & ville du participant\\
+\hline
+{\em p\+Tel} & téléphone du participant\\
+\hline
+{\em p\+Mail} & mail du participant\\
+\hline
+{\em p\+Date\+Naissance} & mail du bénévole\\
+\hline
+{\em p\+Numero\+Licence} & numéro de licence du bénévole ou null\\
+\hline
+{\em p\+Date\+Benevolat} & collection des id des dates où le bénévole sera présent\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_base_de_donnees_1_1_bdd_abfbf2eb771a5e60ef361d5d9fc00304f}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Inscrire\+Intervenant@{Inscrire\+Intervenant}}
+\index{Inscrire\+Intervenant@{Inscrire\+Intervenant}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Inscrire\+Intervenant}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+Inscrire\+Intervenant (
+\begin{DoxyParamCaption}
+\item[{String}]{p\+Nom, }
+\item[{String}]{p\+Prenom, }
+\item[{String}]{p\+Adresse1, }
+\item[{String}]{p\+Adresse2, }
+\item[{String}]{p\+Cp, }
+\item[{String}]{p\+Ville, }
+\item[{String}]{p\+Tel, }
+\item[{String}]{p\+Mail, }
+\item[{Int16}]{p\+Id\+Atelier, }
+\item[{String}]{p\+Id\+Statut}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_abfbf2eb771a5e60ef361d5d9fc00304f}
+
+
+Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel intervenant sans nuité 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cmd} & nom de l'objet command concerné par les paramètres\\
+\hline
+{\em p\+Nom} & nom du participant\\
+\hline
+{\em p\+Prenom} & prénom du participant\\
+\hline
+{\em p\+Adresse1} & adresse1 du participant\\
+\hline
+{\em p\+Adresse2} & adresse2 du participant\\
+\hline
+{\em p\+Cp} & cp du participant\\
+\hline
+{\em p\+Ville} & ville du participant\\
+\hline
+{\em p\+Tel} & téléphone du participant\\
+\hline
+{\em p\+Mail} & mail du participant\\
+\hline
+{\em p\+Id\+Atelier} & Id de l'atelier où interviendra l'intervenant\\
+\hline
+{\em p\+Id\+Statut} & statut de l'intervenant pour l'atelier \+: animateur ou intervenant\\
+\hline
+\end{DoxyParams}
+procédure qui va créer \+: 1-\/ un enregistrement dans la table participant 2-\/ un enregistrement dans la table intervenant en cas d'erreur Oracle, appel à la méthode Get\+Message\+Oracle dont le rôle est d'extraire uniquement le message renvoyé par une procédure ou un trigger Oracle \hypertarget{class_base_de_donnees_1_1_bdd_a2ecae01b408afab3f2457286b9bc6cc7}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Inscrire\+Intervenant@{Inscrire\+Intervenant}}
+\index{Inscrire\+Intervenant@{Inscrire\+Intervenant}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Inscrire\+Intervenant}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+Inscrire\+Intervenant (
+\begin{DoxyParamCaption}
+\item[{String}]{p\+Nom, }
+\item[{String}]{p\+Prenom, }
+\item[{String}]{p\+Adresse1, }
+\item[{String}]{p\+Adresse2, }
+\item[{String}]{p\+Cp, }
+\item[{String}]{p\+Ville, }
+\item[{String}]{p\+Tel, }
+\item[{String}]{p\+Mail, }
+\item[{Int16}]{p\+Id\+Atelier, }
+\item[{String}]{p\+Id\+Statut, }
+\item[{Collection$<$ string $>$}]{p\+Les\+Categories, }
+\item[{Collection$<$ string $>$}]{p\+Les\+Hotels, }
+\item[{Collection$<$ Int16 $>$}]{p\+Les\+Nuits}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_a2ecae01b408afab3f2457286b9bc6cc7}
+
+
+Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel intervenant qui aura des nuités 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cmd} & nom de l'objet command concerné par les paramètres\\
+\hline
+{\em p\+Nom} & nom du participant\\
+\hline
+{\em p\+Prenom} & prénom du participant\\
+\hline
+{\em p\+Adresse1} & adresse1 du participant\\
+\hline
+{\em p\+Adresse2} & adresse2 du participant\\
+\hline
+{\em p\+Cp} & cp du participant\\
+\hline
+{\em p\+Ville} & ville du participant\\
+\hline
+{\em p\+Tel} & téléphone du participant\\
+\hline
+{\em p\+Mail} & mail du participant\\
+\hline
+{\em p\+Id\+Atelier} & Id de l'atelier où interviendra l'intervenant\\
+\hline
+{\em p\+Id\+Statut} & statut de l'intervenant pour l'atelier \+: animateur ou intervenant\\
+\hline
+{\em p\+Les\+Categories} & tableau contenant la catégorie de chambre pour chaque nuité à réserver\\
+\hline
+{\em p\+Les\+Hotels} & tableau contenant l'hôtel pour chaque nuité à réserver\\
+\hline
+{\em p\+Les\+Nuits} & tableau contenant l'id de la date d'arrivée pour chaque nuité à réserver\\
+\hline
+\end{DoxyParams}
+procédure qui va \+: 1-\/ faire appel à la procédure un enregistrement dans la table participant 2-\/ un enregistrement dans la table intervenant 3-\/ un à 2 enregistrements dans la table C\+O\+N\+T\+E\+N\+U\+H\+E\+B\+E\+R\+G\+E\+M\+E\+N\+T
+
+en cas d'erreur Oracle, appel à la méthode Get\+Message\+Oracle dont le rôle est d'extraire uniquement le message renvoyé par une procédure ou un trigger Oracle \hypertarget{class_base_de_donnees_1_1_bdd_a47e6453dc9e7851ca41b8d68a358214f}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Inscrire\+Licencie@{Inscrire\+Licencie}}
+\index{Inscrire\+Licencie@{Inscrire\+Licencie}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Inscrire\+Licencie}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+Inscrire\+Licencie (
+\begin{DoxyParamCaption}
+\item[{String}]{p\+Nom, }
+\item[{String}]{p\+Prenom, }
+\item[{String}]{p\+Adresse1, }
+\item[{String}]{p\+Adresse2, }
+\item[{String}]{p\+Cp, }
+\item[{String}]{p\+Ville, }
+\item[{String}]{p\+Tel, }
+\item[{String}]{p\+Mail, }
+\item[{Int16}]{p\+Id\+Qualite, }
+\item[{Int64}]{p\+Numero\+Licence, }
+\item[{Collection$<$ Int16 $>$}]{p\+Les\+Ateliers, }
+\item[{Int64}]{p\+Num\+Cheque, }
+\item[{Double}]{p\+Montant\+Cheque, }
+\item[{Collection$<$ Int16 $>$}]{p\+Les\+Accompagnants, }
+\item[{String}]{p\+Inscription}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_a47e6453dc9e7851ca41b8d68a358214f}
+
+
+Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel licencié avec nuité 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cmd} & nom de l'objet command concerné par les paramètres\\
+\hline
+{\em p\+Nom} & nom du participant\\
+\hline
+{\em p\+Prenom} & prénom du participant\\
+\hline
+{\em p\+Adresse1} & adresse1 du participant\\
+\hline
+{\em p\+Adresse2} & adresse2 du participant\\
+\hline
+{\em p\+Cp} & cp du participant\\
+\hline
+{\em p\+Ville} & ville du participant\\
+\hline
+{\em p\+Tel} & téléphone du participant\\
+\hline
+{\em p\+Mail} & mail du participant\\
+\hline
+{\em p\+Id\+Qualite} & qualité du licencié\\
+\hline
+{\em p\+Numero\+Licence} & numéro de licence du licencié\\
+\hline
+{\em p\+Les\+Ateliers} & collection des ateliers du licencié\\
+\hline
+{\em p\+Num\+Cheque} & numéro de cheque du licencié\\
+\hline
+{\em p\+Montant\+Cheque} & montant du cheque du licencié\\
+\hline
+{\em p\+Les\+Accompagnants} & collection des accompagnants du licencié\\
+\hline
+{\em p\+Inscription} & type du paiement du licencié\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_base_de_donnees_1_1_bdd_aeea37a4bfb9bf95ef02f350c39d003f4}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Inscrire\+Licencie@{Inscrire\+Licencie}}
+\index{Inscrire\+Licencie@{Inscrire\+Licencie}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Inscrire\+Licencie}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+Inscrire\+Licencie (
+\begin{DoxyParamCaption}
+\item[{String}]{p\+Nom, }
+\item[{String}]{p\+Prenom, }
+\item[{String}]{p\+Adresse1, }
+\item[{String}]{p\+Adresse2, }
+\item[{String}]{p\+Cp, }
+\item[{String}]{p\+Ville, }
+\item[{String}]{p\+Tel, }
+\item[{String}]{p\+Mail, }
+\item[{Int16}]{p\+Id\+Qualite, }
+\item[{Int64}]{p\+Numero\+Licence, }
+\item[{Collection$<$ Int16 $>$}]{p\+Les\+Ateliers, }
+\item[{Collection$<$ string $>$}]{p\+Les\+Categories, }
+\item[{Collection$<$ string $>$}]{p\+Les\+Hotels, }
+\item[{Collection$<$ Int16 $>$}]{p\+Les\+Nuits, }
+\item[{Int64}]{p\+Num\+Cheque, }
+\item[{Double}]{p\+Montant\+Cheque, }
+\item[{Collection$<$ Int16 $>$}]{p\+Les\+Accompagnants, }
+\item[{String}]{p\+Inscription}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_aeea37a4bfb9bf95ef02f350c39d003f4}
+
+
+Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel intervenant sans nuité 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cmd} & nom de l'objet command concerné par les paramètres\\
+\hline
+{\em p\+Nom} & nom du participant\\
+\hline
+{\em p\+Prenom} & prénom du participant\\
+\hline
+{\em p\+Adresse1} & adresse1 du participant\\
+\hline
+{\em p\+Adresse2} & adresse2 du participant\\
+\hline
+{\em p\+Cp} & cp du participant\\
+\hline
+{\em p\+Ville} & ville du participant\\
+\hline
+{\em p\+Tel} & téléphone du participant\\
+\hline
+{\em p\+Mail} & mail du participant\\
+\hline
+{\em p\+Id\+Qualite} & qualité du licencié\\
+\hline
+{\em p\+Numero\+Licence} & numéro de licence du licencié\\
+\hline
+{\em p\+Les\+Ateliers} & collection des ateliers du licencié\\
+\hline
+{\em p\+Les\+Categories} & collection des catégories de l'hotel du licencié\\
+\hline
+{\em p\+Les\+Hotels} & collection des hotels du licencié\\
+\hline
+{\em p\+Les\+Nuits} & collection des nuits du licencié\\
+\hline
+{\em p\+Num\+Cheque} & numéro du cheque du licencié\\
+\hline
+{\em p\+Montant\+Cheque} & montant du cheque du licencié\\
+\hline
+{\em p\+Les\+Accompagnants} & collection des accompagnants du licencié\\
+\hline
+{\em p\+Inscription} & type du paiement du licencié\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_base_de_donnees_1_1_bdd_af48b871d33fdfd845de9d4012109d00f}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Obtenir\+Dates\+Nuites@{Obtenir\+Dates\+Nuites}}
+\index{Obtenir\+Dates\+Nuites@{Obtenir\+Dates\+Nuites}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Obtenir\+Dates\+Nuites}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$Int16, String$>$ Base\+De\+Donnees.\+Bdd.\+Obtenir\+Dates\+Nuites (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_af48b871d33fdfd845de9d4012109d00f}
+
+
+fonction permettant de construire un dictionnaire dont l'id est l'id d'une nuité et le contenu une date sous la la forme \+: lundi 7 janvier 2013 /// 
+
+\begin{DoxyReturn}{Returns}
+un dictionnaire dont l'id est l'id d'une nuité et le contenu une date
+\end{DoxyReturn}
+\hypertarget{class_base_de_donnees_1_1_bdd_a1f5203fd6378328a9545b47b7dd6bd97}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Obtenir\+Donnes\+Oracle@{Obtenir\+Donnes\+Oracle}}
+\index{Obtenir\+Donnes\+Oracle@{Obtenir\+Donnes\+Oracle}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Obtenir\+Donnes\+Oracle}]{\setlength{\rightskip}{0pt plus 5cm}Data\+Table Base\+De\+Donnees.\+Bdd.\+Obtenir\+Donnes\+Oracle (
+\begin{DoxyParamCaption}
+\item[{String}]{Une\+Table\+Ou\+Vue}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_a1f5203fd6378328a9545b47b7dd6bd97}
+
+
+permet de récupérer le contenu d'une table ou d'une vue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Une\+Table\+Ou\+Vue} & nom de la table ou la vue dont on veut récupérer le contenu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un objet de type datatable contenant les données récupérées
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+D\+L/\+Maison\+Des\+Ligues/Bdd.\+cs\end{DoxyCompactItemize}

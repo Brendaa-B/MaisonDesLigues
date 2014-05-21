@@ -1,0 +1,61 @@
+create or replace procedure insertionAtelier
+(
+  libelleatelier in ATELIER.LIBELLEATELIER%TYPE,
+  nbplacesmaxi in ATELIER.NBPLACESMAXI%TYPE
+) as
+begin
+  insert into ATELIER values (seqatelier.nextval, libelleatelier, nbplacesmaxi);
+end insertionAtelier;
+
+create or replace procedure insertionAtelier
+(
+  libelleatelier in ATELIER.LIBELLEATELIER%TYPE,
+  nbplacesmaxi in ATELIER.NBPLACESMAXI%TYPE
+) as
+begin
+  insert into ATELIER values (seqatelier.nextval, libelleatelier, nbplacesmaxi);
+end insertionAtelier;
+
+create or replace PROCEDURE insertionVacation
+(
+  idAtelier in vacation.idatelier%TYPE,
+  numero in vacation.numero%TYPE,
+  heuredebut varchar,
+  heurefin varchar
+) as
+begin
+  insert into vacation values (idAtelier, numero, TO_DATE(heuredebut, 'DD/MM/YYYY HH24:MI:SS'), TO_DATE(heurefin, 'DD/MM/YYYY HH24:MI:SS'));
+  commit;
+end insertionVacation;
+
+create or replace PROCEDURE MODIFICATIONVACATION
+(
+  pidAtelier in vacation.idatelier%TYPE,
+  pnumero in vacation.numero%TYPE,
+  pheuredebut varchar,
+  pheurefin varchar
+) as
+begin
+  if pidatelier is not null and pnumero is not null then
+    if pheurefin is not null and pheurefin is not null then     
+      update vacation
+      set vacation.heuredebut = TO_DATE(pheuredebut, 'DD/MM/YYYY HH24:MI:SS'),
+      vacation.heurefin = TO_DATE(pheurefin, 'DD/MM/YYYY HH24:MI:SS')
+      where vacation.idatelier = pidatelier
+      and vacation.numero = pnumero;
+      commit;
+    elsif pheuredebut is not null then
+      update vacation
+        set vacation.heuredebut = TO_DATE(pheuredebut, 'DD/MM/YYYY HH24:MI:SS')
+        where vacation.idatelier = pidatelier
+        and vacation.numero = pnumero;
+        commit;
+    elsif pheurefin is not null then     
+      update vacation
+      set vacation.heurefin = TO_DATE(pheurefin, 'DD/MM/YYYY HH24:MI:SS')
+      where vacation.idatelier = pidatelier
+      and vacation.numero = pnumero;
+      commit;
+    end if;
+  end if;
+END MODIFICATIONVACATION;
