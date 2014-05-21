@@ -26,7 +26,17 @@ void \hyperlink{class_base_de_donnees_1_1_bdd_a47e6453dc9e7851ca41b8d68a358214f}
 void \hyperlink{class_base_de_donnees_1_1_bdd_aeea37a4bfb9bf95ef02f350c39d003f4}{Inscrire\+Licencie} (String p\+Nom, String p\+Prenom, String p\+Adresse1, String p\+Adresse2, String p\+Cp, String p\+Ville, String p\+Tel, String p\+Mail, Int16 p\+Id\+Qualite, Int64 p\+Numero\+Licence, Collection$<$ Int16 $>$ p\+Les\+Ateliers, Collection$<$ string $>$ p\+Les\+Categories, Collection$<$ string $>$ p\+Les\+Hotels, Collection$<$ Int16 $>$ p\+Les\+Nuits, Int64 p\+Num\+Cheque, Double p\+Montant\+Cheque, Collection$<$ Int16 $>$ p\+Les\+Accompagnants, String p\+Inscription)
 \begin{DoxyCompactList}\small\item\em Procédure publique qui va appeler la procédure stockée permettant d'inscrire un nouvel intervenant sans nuité \end{DoxyCompactList}\item 
 void \hyperlink{class_base_de_donnees_1_1_bdd_a32cef1502d8342b040476519c7b6df1e}{Enregistrer\+Paiement} (Double p\+Montant\+Cheque, Int64 p\+Numero\+Cheque, Int64 p\+Numero\+Licencie, String p\+Type\+Paiement)
-\begin{DoxyCompactList}\small\item\em Fonction qui permet d'enregistrer un paiement \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d'enregistrer un paiement \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_a5c46dd24715a9f9c7298f965963f632c}{ajout\+Atelier} (string Libelle, int Nb\+Places\+Maxi)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d'ajouter un nouvel atelier \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_a01351c579bdfe073813f741ce33e54ce}{ajout\+Theme} (int id\+Atelier, int numero, string libelle\+Theme)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d'ajouter un theme \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_ad7aa89a1bbf10e7a5996fb93634d72fe}{ajout\+Vacation} (int id\+Atelier, int numero, string date\+Heure\+Debut, string date\+Heurefin)
+\begin{DoxyCompactList}\small\item\em Fonction permettant d'ajouter une vacation \end{DoxyCompactList}\item 
+void \hyperlink{class_base_de_donnees_1_1_bdd_a7c2205af82b45cce1c03a2dd9bc00aa9}{modif\+Vacation} (int id\+Atelier, int numero, string date\+Heure\+Debut, string date\+Heure\+Fin)
+\begin{DoxyCompactList}\small\item\em Fonction permettant de modifier les dates et heures d'une vacation \end{DoxyCompactList}\item 
+Data\+Table \hyperlink{class_base_de_donnees_1_1_bdd_ab255932540cdc034e41a6d526e3e5c62}{Obtenir\+Id\+Atelier\+Vacation} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne tout les ateliers qui sont en relations avec des vacations \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -54,6 +64,72 @@ on commence par récupérer dans Cn\+String les informations contenues dans le f
 on va remplacer dans la chaine de connexion les paramètres par le login et le pwd saisis dans les zones de texte. Pour ça on va utiliser la méthode Format de la classe String. /// 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_base_de_donnees_1_1_bdd_a5c46dd24715a9f9c7298f965963f632c}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!ajout\+Atelier@{ajout\+Atelier}}
+\index{ajout\+Atelier@{ajout\+Atelier}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{ajout\+Atelier}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+ajout\+Atelier (
+\begin{DoxyParamCaption}
+\item[{string}]{Libelle, }
+\item[{int}]{Nb\+Places\+Maxi}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_a5c46dd24715a9f9c7298f965963f632c}
+
+
+Fonction permettant d'ajouter un nouvel atelier 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Libelle} & Libelle de l'atelier\\
+\hline
+{\em Nb\+Places\+Maxi} & Nombre de places que peut accueillir l'atelier\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_base_de_donnees_1_1_bdd_a01351c579bdfe073813f741ce33e54ce}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!ajout\+Theme@{ajout\+Theme}}
+\index{ajout\+Theme@{ajout\+Theme}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{ajout\+Theme}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+ajout\+Theme (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Atelier, }
+\item[{int}]{numero, }
+\item[{string}]{libelle\+Theme}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_a01351c579bdfe073813f741ce33e54ce}
+
+
+Fonction permettant d'ajouter un theme 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Atelier} & Id de l'atelier concerné par le nouveau theme\\
+\hline
+{\em numero} & Numéro du thème\\
+\hline
+{\em libelle\+Theme} & Libelle du thème\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_base_de_donnees_1_1_bdd_ad7aa89a1bbf10e7a5996fb93634d72fe}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!ajout\+Vacation@{ajout\+Vacation}}
+\index{ajout\+Vacation@{ajout\+Vacation}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{ajout\+Vacation}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+ajout\+Vacation (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Atelier, }
+\item[{int}]{numero, }
+\item[{string}]{date\+Heure\+Debut, }
+\item[{string}]{date\+Heurefin}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_ad7aa89a1bbf10e7a5996fb93634d72fe}
+
+
+Fonction permettant d'ajouter une vacation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Atelier} & Id de l'atelier concernée\\
+\hline
+{\em numero} & numero\\
+\hline
+{\em date\+Heure\+Debut} & Date et heure de début de la vacation\\
+\hline
+{\em date\+Heurefin} & Date et heure de fin de la vacation\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_base_de_donnees_1_1_bdd_a32cef1502d8342b040476519c7b6df1e}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Enregistrer\+Paiement@{Enregistrer\+Paiement}}
 \index{Enregistrer\+Paiement@{Enregistrer\+Paiement}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
 \subsubsection[{Enregistrer\+Paiement}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+Enregistrer\+Paiement (
@@ -368,6 +444,29 @@ Procédure publique qui va appeler la procédure stockée permettant d'inscrire 
 {\em p\+Inscription} & type du paiement du licencié\\
 \hline
 \end{DoxyParams}
+\hypertarget{class_base_de_donnees_1_1_bdd_a7c2205af82b45cce1c03a2dd9bc00aa9}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!modif\+Vacation@{modif\+Vacation}}
+\index{modif\+Vacation@{modif\+Vacation}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{modif\+Vacation}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+De\+Donnees.\+Bdd.\+modif\+Vacation (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Atelier, }
+\item[{int}]{numero, }
+\item[{string}]{date\+Heure\+Debut, }
+\item[{string}]{date\+Heure\+Fin}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_a7c2205af82b45cce1c03a2dd9bc00aa9}
+
+
+Fonction permettant de modifier les dates et heures d'une vacation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Atelier} & id de l'atelier concernée\\
+\hline
+{\em date\+Heure\+Debut} & date et heure de début\\
+\hline
+{\em date\+Heure\+Fin} & date et heure de fin\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_base_de_donnees_1_1_bdd_af48b871d33fdfd845de9d4012109d00f}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Obtenir\+Dates\+Nuites@{Obtenir\+Dates\+Nuites}}
 \index{Obtenir\+Dates\+Nuites@{Obtenir\+Dates\+Nuites}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
 \subsubsection[{Obtenir\+Dates\+Nuites}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$Int16, String$>$ Base\+De\+Donnees.\+Bdd.\+Obtenir\+Dates\+Nuites (
@@ -401,8 +500,22 @@ permet de récupérer le contenu d'une table ou d'une vue.
 \begin{DoxyReturn}{Returns}
 un objet de type datatable contenant les données récupérées
 \end{DoxyReturn}
+\hypertarget{class_base_de_donnees_1_1_bdd_ab255932540cdc034e41a6d526e3e5c62}{\index{Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}!Obtenir\+Id\+Atelier\+Vacation@{Obtenir\+Id\+Atelier\+Vacation}}
+\index{Obtenir\+Id\+Atelier\+Vacation@{Obtenir\+Id\+Atelier\+Vacation}!Base\+De\+Donnees\+::\+Bdd@{Base\+De\+Donnees\+::\+Bdd}}
+\subsubsection[{Obtenir\+Id\+Atelier\+Vacation}]{\setlength{\rightskip}{0pt plus 5cm}Data\+Table Base\+De\+Donnees.\+Bdd.\+Obtenir\+Id\+Atelier\+Vacation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_base_de_donnees_1_1_bdd_ab255932540cdc034e41a6d526e3e5c62}
+
+
+Fonction qui retourne tout les ateliers qui sont en relations avec des vacations 
+
+\begin{DoxyReturn}{Returns}
+une datatable représentant les ateliers concernés
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-M\+D\+L/\+Maison\+Des\+Ligues/Bdd.\+cs\end{DoxyCompactItemize}
+Maison\+Des\+Ligues/Bdd.\+cs\end{DoxyCompactItemize}

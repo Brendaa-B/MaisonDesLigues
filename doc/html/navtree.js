@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "MDL", "index.html", [
-    [ "MDL", "md__m_d_l__r_e_a_d_m_e.html", null ],
+    [ "MDL", "md__r_e_a_d_m_e.html", null ],
     [ "Packages", null, [
       [ "Packages", "namespaces.html", "namespaces" ]
     ] ],

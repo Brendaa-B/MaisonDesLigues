@@ -30,7 +30,6 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MDL
-   &#160;<span id="projectnumber">1.0</span>
    </div>
   </td>
  </tr>
@@ -147,6 +146,21 @@ Dictionary&lt; Int16, String &gt;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a32cef1502d8342b040476519c7b6df1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_de_donnees_1_1_bdd.html#a32cef1502d8342b040476519c7b6df1e">EnregistrerPaiement</a> (Double pMontantCheque, Int64 pNumeroCheque, Int64 pNumeroLicencie, String pTypePaiement)</td></tr>
 <tr class="memdesc:a32cef1502d8342b040476519c7b6df1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'enregistrer un paiement  <a href="#a32cef1502d8342b040476519c7b6df1e">More...</a><br /></td></tr>
 <tr class="separator:a32cef1502d8342b040476519c7b6df1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c46dd24715a9f9c7298f965963f632c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_de_donnees_1_1_bdd.html#a5c46dd24715a9f9c7298f965963f632c">ajoutAtelier</a> (string Libelle, int NbPlacesMaxi)</td></tr>
+<tr class="memdesc:a5c46dd24715a9f9c7298f965963f632c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant d'ajouter un nouvel atelier  <a href="#a5c46dd24715a9f9c7298f965963f632c">More...</a><br /></td></tr>
+<tr class="separator:a5c46dd24715a9f9c7298f965963f632c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01351c579bdfe073813f741ce33e54ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_de_donnees_1_1_bdd.html#a01351c579bdfe073813f741ce33e54ce">ajoutTheme</a> (int idAtelier, int numero, string libelleTheme)</td></tr>
+<tr class="memdesc:a01351c579bdfe073813f741ce33e54ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant d'ajouter un theme  <a href="#a01351c579bdfe073813f741ce33e54ce">More...</a><br /></td></tr>
+<tr class="separator:a01351c579bdfe073813f741ce33e54ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7aa89a1bbf10e7a5996fb93634d72fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_de_donnees_1_1_bdd.html#ad7aa89a1bbf10e7a5996fb93634d72fe">ajoutVacation</a> (int idAtelier, int numero, string dateHeureDebut, string dateHeurefin)</td></tr>
+<tr class="memdesc:ad7aa89a1bbf10e7a5996fb93634d72fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant d'ajouter une vacation  <a href="#ad7aa89a1bbf10e7a5996fb93634d72fe">More...</a><br /></td></tr>
+<tr class="separator:ad7aa89a1bbf10e7a5996fb93634d72fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2205af82b45cce1c03a2dd9bc00aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_de_donnees_1_1_bdd.html#a7c2205af82b45cce1c03a2dd9bc00aa9">modifVacation</a> (int idAtelier, int numero, string dateHeureDebut, string dateHeureFin)</td></tr>
+<tr class="memdesc:a7c2205af82b45cce1c03a2dd9bc00aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant de modifier les dates et heures d'une vacation  <a href="#a7c2205af82b45cce1c03a2dd9bc00aa9">More...</a><br /></td></tr>
+<tr class="separator:a7c2205af82b45cce1c03a2dd9bc00aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab255932540cdc034e41a6d526e3e5c62"><td class="memItemLeft" align="right" valign="top">DataTable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_de_donnees_1_1_bdd.html#ab255932540cdc034e41a6d526e3e5c62">ObtenirIdAtelierVacation</a> ()</td></tr>
+<tr class="memdesc:ab255932540cdc034e41a6d526e3e5c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui retourne tout les ateliers qui sont en relations avec des vacations  <a href="#ab255932540cdc034e41a6d526e3e5c62">More...</a><br /></td></tr>
+<tr class="separator:ab255932540cdc034e41a6d526e3e5c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab7425636f7b6865411160424455ddacf"></a>
@@ -187,6 +201,132 @@ Dictionary&lt; Int16, String &gt;&#160;</td><td class="memItemRight" valign="bot
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a5c46dd24715a9f9c7298f965963f632c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BaseDeDonnees.Bdd.ajoutAtelier </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>Libelle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>NbPlacesMaxi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permettant d'ajouter un nouvel atelier </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Libelle</td><td>Libelle de l'atelier</td></tr>
+    <tr><td class="paramname">NbPlacesMaxi</td><td>Nombre de places que peut accueillir l'atelier</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a01351c579bdfe073813f741ce33e54ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BaseDeDonnees.Bdd.ajoutTheme </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idAtelier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numero</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>libelleTheme</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permettant d'ajouter un theme </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idAtelier</td><td>Id de l'atelier concerné par le nouveau theme</td></tr>
+    <tr><td class="paramname">numero</td><td>Numéro du thème</td></tr>
+    <tr><td class="paramname">libelleTheme</td><td>Libelle du thème</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad7aa89a1bbf10e7a5996fb93634d72fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BaseDeDonnees.Bdd.ajoutVacation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idAtelier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numero</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dateHeureDebut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dateHeurefin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permettant d'ajouter une vacation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idAtelier</td><td>Id de l'atelier concernée</td></tr>
+    <tr><td class="paramname">numero</td><td>numero</td></tr>
+    <tr><td class="paramname">dateHeureDebut</td><td>Date et heure de début de la vacation</td></tr>
+    <tr><td class="paramname">dateHeurefin</td><td>Date et heure de fin de la vacation</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a32cef1502d8342b040476519c7b6df1e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -835,6 +975,54 @@ Dictionary&lt; Int16, String &gt;&#160;</td><td class="memItemRight" valign="bot
 
 </div>
 </div>
+<a class="anchor" id="a7c2205af82b45cce1c03a2dd9bc00aa9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BaseDeDonnees.Bdd.modifVacation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idAtelier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numero</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dateHeureDebut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>dateHeureFin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction permettant de modifier les dates et heures d'une vacation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idAtelier</td><td>id de l'atelier concernée</td></tr>
+    <tr><td class="paramname">dateHeureDebut</td><td>date et heure de début</td></tr>
+    <tr><td class="paramname">dateHeureFin</td><td>date et heure de fin</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="af48b871d33fdfd845de9d4012109d00f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -878,8 +1066,26 @@ Dictionary&lt; Int16, String &gt;&#160;</td><td class="memItemRight" valign="bot
 
 </div>
 </div>
+<a class="anchor" id="ab255932540cdc034e41a6d526e3e5c62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataTable BaseDeDonnees.Bdd.ObtenirIdAtelierVacation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui retourne tout les ateliers qui sont en relations avec des vacations </p>
+<dl class="section return"><dt>Returns</dt><dd>une datatable représentant les ateliers concernés</dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>MDL/MaisonDesLigues/Bdd.cs</li>
+<li>MaisonDesLigues/Bdd.cs</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -887,7 +1093,7 @@ Dictionary&lt; Int16, String &gt;&#160;</td><td class="memItemRight" valign="bot
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_base_de_donnees.html">BaseDeDonnees</a></li><li class="navelem"><a class="el" href="class_base_de_donnees_1_1_bdd.html">Bdd</a></li>
-    <li class="footer">Generated on Wed May 21 2014 11:09:05 for MDL by
+    <li class="footer">Generated on Wed May 21 2014 12:52:43 for MDL by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
   </ul>
