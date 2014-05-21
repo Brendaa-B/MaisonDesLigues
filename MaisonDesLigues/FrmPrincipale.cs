@@ -432,7 +432,15 @@ namespace MaisonDesLigues
                             {
                                 UneConnexion.EnregistrerPaiement(MontantCheque2, System.Convert.ToInt64(TxtNumChequeInsc2.Text), System.Convert.ToInt64(TxtLicenceLicencie.Text), "Acco");
                             }
-                                MessageBox.Show("Inscription Licencié effectuée");
+                            MessageBox.Show("Inscription Licencié effectuée");
+                            if (TxtMail.Text != "")
+                            {
+                                Utilitaire.EnvoyerMail(TxtMail.Text, TxtNom.Text, TxtPrenom.Text);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Aucune adresse mail n'a été entrée, aucun mail ne vous a été envoyé.");
+                            }
                             Utilitaire.ViderGroupBox(GrpIdentite, false);
                             Utilitaire.ViderGroupBox(GrpTypeParticipant, false);
                             Utilitaire.ViderGroupBox(GrpIntervenant, true);
@@ -450,6 +458,14 @@ namespace MaisonDesLigues
                             UneConnexion.EnregistrerPaiement(MontantCheque2, System.Convert.ToInt64(TxtNumChequeInsc2.Text), System.Convert.ToInt64(TxtLicenceLicencie.Text), "Acco");
                         }
                         MessageBox.Show("Inscription Licencié effectuée");
+                        if (TxtMail.Text != "")
+                        {
+                            Utilitaire.EnvoyerMail(TxtMail.Text, TxtNom.Text, TxtPrenom.Text);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Aucune adresse mail n'a été entrée, aucun mail ne vous a été envoyé.");
+                        }
                         Utilitaire.ViderGroupBox(GrpIdentite, false);
                         Utilitaire.ViderGroupBox(GrpTypeParticipant, false);
                         Utilitaire.ViderGroupBox(GrpIntervenant, true);
@@ -460,8 +476,14 @@ namespace MaisonDesLigues
                 }
                 else
                 {
-                    MessageBox.Show("Montant incorrect ! Mail envoyé.");
-                    //EMAIL ICI
+                    if (TxtMail.Text != "")
+                    {
+                        Utilitaire.EnvoyerMail(TxtMail.Text, TxtNom.Text, TxtPrenom.Text, MontantTotalCheque1+MontantTotalCheque2);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Aucune adresse mail n'a été entrée, aucun mail ne vous a été envoyé.");
+                    }
                 }
                 }
                 
@@ -471,15 +493,5 @@ namespace MaisonDesLigues
                 MessageBox.Show(Ex.Message);
             }
         }
-
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //private void ChkDateBenevole_CheckedChanged(object sender, KeyEventArgs e)
-        //{
-
-        //}
     }
 }

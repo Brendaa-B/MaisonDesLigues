@@ -270,51 +270,6 @@ namespace MaisonDesLigues
             }
         }
 
-
-        /// <summary>
-        ///  Fonction permettant d'envoyer un mail 
-        ///  d'information lors d'une incription.
-        /// </summary>
-        /// <param name="pDestinataire">Adresse mail du destinataire</param>
-        /// <param name="pNom">Nom de l'inscrit</param>
-        /// <param name="pPrenom">Prénom de l'inscrit</param>
-        /// <param name="pAtelier">Nom de l'atelier complet</param>
-        public static void EnvoyerMail(String pDestinataire, String pNom, String pPrenom, String pAtelier)
-        {
-            try
-            {
-                if (Regex.IsMatch(pDestinataire, @"^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$"))
-                {
-                    MailMessage mail = new MailMessage();
-                    using (SmtpClient smtp = new SmtpClient(ConfigurationManager.AppSettings["SmtpServeur"]))
-                    {
-                        mail.From = new MailAddress(ConfigurationManager.AppSettings["SmtpFrom"], ConfigurationManager.AppSettings["TitreApplication"]);
-                        mail.To.Add(pDestinataire);
-                        mail.Subject = ConfigurationManager.AppSettings["SmtpSubject"];
-                        mail.Body = "      Votre inscription à l'atelier " + pAtelier + " au nom de " + pNom + " " + pPrenom + " n'a pas pu être prise en compte ce jour (" + DateTime.Now + ") car celui-ci était complet.\n\nCordialement, l'équipe de maison des ligues.";
-                        smtp.Port = 587;
-                        smtp.EnableSsl = true;
-                        smtp.UseDefaultCredentials = false;
-                        smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                        smtp.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["SmtpFrom"], ConfigurationManager.AppSettings["SmtpPwd"]);
-
-                        smtp.Send(mail);
-
-                        MessageBox.Show("Un mail vous a été envoyé pour vous informer que l'inscription a un atelier s'est mal déroulée.");
-                    }
-                }
-                else
-                {
-                    throw new Exception("L'adresse entrée est incorrecte, le mail de confirmation n'a pas pu être envoyé.");
-                }
- 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         /// <summary>
         ///  Fonction permettant d'envoyer un mail 
         ///  d'annulation d'incription.
